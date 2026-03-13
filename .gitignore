@@ -1,0 +1,10 @@
+# Firebase設定（秘密情報）
+common.js
+
+# 環境変数ファイル
+.env
+.env.local
+
+# その他
+.DS_Store
+node_modules/

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>質問者用サイト</title>
+  <link rel="stylesheet" href="questioner.css">
+</head>
+<body>
+  <!-- ID入力画面（URLにIDがない場合に表示） -->
+  <div id="entry-screen" class="entry-screen" style="display:none;">
+    <div class="entry-card">
+      <h1>匿名チャット</h1>
+      <p class="entry-description">回答者から共有されたURLまたはIDを入力してください</p>
+      <input type="text" id="entry-input" placeholder="URLまたはIDを入力" autocomplete="off">
+      <div id="entry-error" class="entry-error"></div>
+      <button id="entry-btn">チャットを開始</button>
+    </div>
+  </div>
+
+  <!-- チャット画面（IDがある場合に表示） -->
+  <div id="chat-screen" class="chat-container" style="display:none;">
+    <div class="header">
+      <h1>匿名チャット</h1>
+    </div>
+
+    <div id="messages"></div>
+
+    <div class="input-area">
+      <input type="text" id="message-input" placeholder="メッセージを入力">
+      <button id="send-btn">送信</button>
+    </div>
+  </div>
+
+  <!-- Firebase SDKを読み込み -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+  <script src="common.js"></script>
+  <script src="questioner.js"></script>
+</body>
+</html>

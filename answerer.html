@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>回答者用サイト</title>
+  <link rel="stylesheet" href="answerer.css">
+</head>
+<body>
+  <div class="container">
+    <!-- ID表示エリア -->
+    <div class="id-section">
+      <h1>あなたの回答者ID</h1>
+      <div id="answerer-id" class="id-display">読み込み中...</div>
+      <button id="copy-btn">共有URLをコピー</button>
+      <div id="copy-message"></div>
+      <div id="connection-status" class="connection-status"></div>
+    </div>
+    
+    <!-- チャットエリア -->
+    <div class="chat-section">
+      <!-- 質問者一覧 -->
+      <div class="questioner-list">
+        <h2>質問者一覧</h2>
+        <div id="questioner-list">
+          <p class="empty-message">質問者が接続されていません</p>
+        </div>
+      </div>
+      
+      <!-- チャットエリア -->
+      <div class="chat-area">
+        <div class="chat-header">
+          <h2 id="chat-title">質問者を選択してください</h2>
+        </div>
+        <div id="messages"></div>
+        <div class="input-area">
+          <input type="text" id="message-input" placeholder="メッセージを入力" disabled>
+          <button id="send-btn" disabled>送信</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Firebase SDKを読み込み -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+  <script src="common.js"></script>
+  <script src="answerer.js"></script>
+</body>
+</html>

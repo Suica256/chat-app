@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f5f5f5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* ID表示エリア */
+.id-section {
+  background: white;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.id-section h1 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.id-display {
+  font-size: 48px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 20px 0;
+  letter-spacing: 4px;
+}
+
+#copy-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+#copy-btn:hover {
+  background: #0056b3;
+}
+
+#copy-message {
+  margin-top: 10px;
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* 接続状態 */
+.connection-status {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.connection-status.online {
+  background: #d4edda;
+  color: #155724;
+}
+
+.connection-status.offline {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* チャットエリア */
+.chat-section {
+  display: flex;
+  gap: 20px;
+  height: 600px;
+}
+
+/* 質問者一覧 */
+.questioner-list {
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  overflow-y: auto;
+}
+
+.questioner-list h2 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #007bff;
+}
+
+#questioner-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.questioner-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+/* NEWバッジ */
+.new-badge {
+  background: #dc3545;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 7px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.questioner-item:hover {
+  background: #e9ecef;
+}
+
+.questioner-item.active {
+  background: #e3f2fd;
+  border-color: #007bff;
+}
+
+.empty-message {
+  color: #999;
+  text-align: center;
+  padding: 20px;
+}
+
+/* チャットエリア */
+.chat-area {
+  flex: 1;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  padding: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.chat-header h2 {
+  color: #333;
+  font-size: 18px;
+}
+
+#messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #fafafa;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message.mine {
+  background: #007bff;
+  color: white;
+  margin-left: auto;
+  align-items: flex-end;
+}
+
+.message.other {
+  background: white;
+  border: 1px solid #e0e0e0;
+  align-items: flex-start;
+}
+
+.message-text {
+  line-height: 1.4;
+}
+
+.message-time {
+  font-size: 11px;
+  margin-top: 4px;
+  opacity: 0.75;
+}
+
+.input-area {
+  display: flex;
+  padding: 20px;
+  border-top: 1px solid #e0e0e0;
+  gap: 10px;
+}
+
+#message-input {
+  flex: 1;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#message-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+#send-btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#send-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+#send-btn:not(:disabled):hover {
+  background: #0056b3;
+}
